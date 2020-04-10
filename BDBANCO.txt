@@ -1,0 +1,24 @@
+create database Banco;
+use Banco;
+
+create table movimiento (
+id_movimiento int primary key auto_increment,
+id_cliente int,
+nro_cuenta varchar(5),
+tipo_movi varchar(20),
+fecha_movi datetime default current_timestamp,
+monto numeric);
+
+
+insert into movimiento (id_movimiento, id_cliente,nro_cuenta,tipo_movi,monto) values  (01,1,'094791679416','BCP',130.00);
+
+
+create table cliente (
+id_cliente int primary key auto_increment,
+nomb_cliente varchar (30),
+saldo numeric,
+nro_cuenta varchar(5)
+);
+
+insert into cliente (nomb_cliente,saldo,nro_cuenta ) values ('William',14000,'0948288738');
+
